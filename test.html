@@ -7,6 +7,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PcrTime</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
     <link rel="shortcut icon" href="/images/logo1.png">
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -45,7 +47,7 @@
     </nav>
     <div class="grid">
       <h1 id="titre"> Veuillez rentrer vos informations correctement</h1>
-      <form name="f" method="GET">
+      <form name="f">
       <input type="text" placeholder="Entrez votre Nom de famille" id="nom">
         <input type="text" placeholder="Entrez votre prénom" id="prenom">
         <input type="text" id="dateDeNaissance" placeholder="jj/mm/aaaa">
@@ -61,7 +63,7 @@
         <input type="text" id="ville" placeholder="votre ville">
         <input type="number" id="codePostale" placeholder="Votre code Postale">
         <input type="text" id="email" placeholder="Votre @Email">
-        <input type="submit" value="Continuer" onclick="verif()"> 
+        <input type="submit" value="Continuer" onclick="createPdf()"> 
         </form>     
     </div>
     <!-- Footer Section -->
