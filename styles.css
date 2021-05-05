@@ -43,9 +43,10 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  z-index: 999;
 }
 
-.fa-gem {
+.fa-stethoscope {
   margin-right: 0.5rem;
 }
 
