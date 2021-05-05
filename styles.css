@@ -652,7 +652,7 @@ form {
   "t4 t6"
   "bt bt";
 }
-input {
+input , select {
   margin: 20px;
   height: 45px;
   border: 2px solid rgba(0, 0, 139, 0.479);
@@ -682,8 +682,8 @@ input {
 #email {
   grid-area: "t6";
 }
-#sexe {
-  grid-area: "t9";
+select {
+  text-align-last: center;
 }
 input[type="submit"] {
   grid-area: bt;
