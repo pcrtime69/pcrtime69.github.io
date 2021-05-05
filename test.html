@@ -43,40 +43,22 @@
         </ul>
       </div>
     </nav>
-
-    <!-- Hero Section -->
-    <div class="main">
-      <div class="main__container">
-        <div class="main__content">
-          <h1>TESTE PCR</h1>
-          <h2>en toute rapidité et securité.</h2>
-          <p>Fait ton test pcr pour voyager partout et plein d'autres choses, pour cela clique sur commencer</p>
-          <button class="main__btn"><a href="#positif">Commencer</a></button>
-        </div>
-        <div class="main__img--container">
-          <img id="main__img" src="images/pic1.svg" />
-        </div>
-      </div>
+    <div class="grid">
+      <h1 id="titre"> Veuillez rentrer vos informations correctement</h1>
+      <form name="f" method="GET">
+      <input type="text" placeholder="Entrez votre Nom de famille" id="nom">
+        <input type="text" placeholder="Entrez votre prénom" id="prenom">
+        <input type="text" id="dateDeNaissance" placeholder="jj/mm/aaaa">
+        <input type="number" id="sexe" placeholder="Entrez Homme ou Femme">
+        <input type="text" id="adresse" placeholder="Entrez votre adresse">
+        <input type="text" id="ville" placeholder="votre ville">
+        <input type="number" id="codePostale" placeholder="Votre code Postale">
+        <input type="text" id="email" placeholder="Votre @Email">
+        <input type="submit" value="Continuer" onclick="verif()"> 
+        </form>     
     </div>
-
-    <!-- Services Section -->
-    <div class="services" id="positif">
-      <h1>Achetez votre teste pcr en toute sécurité</h1>
-      <div class="services__container">
-        <div class="services__card">
-          <h2>Teste Positif</h2>
-          <p>teste pcr positif  </p>
-          <a href="test.html"><button>Commencer</button> </a>
-        </div>
-        <div class="services__card" id="negatif">
-          <h2>Teste Négatif</h2>
-          <p>teste pcr négatif</p>
-          <a href="test.html"><button>Commencer</button> </a>
-        </div>
-      </div>
-    </div>
-
     <!-- Footer Section -->
+    <footer>
     <div class="footer__container">
 
       <section class="social__media">
@@ -88,6 +70,7 @@
           
       </section>
     </div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
