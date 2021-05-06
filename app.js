@@ -5,16 +5,42 @@ menu.addEventListener('click', function() {
   menu.classList.toggle('is-active');
   menuLinks.classList.toggle('active');
 });
-
+function stocker() {
+  let nom_ = document.getElementById("nom").value.toUpperCase();
+  let prenom_ = document.getElementById("prenom").value;
+  let  dateDeNaissance_= document.getElementById("dateDeNaissance").value;
+  let email_ = document.getElementById("email").value;
+  let adresse_ = document.getElementById("adresse").value.toUpperCase();
+  let sexe_ = document.getElementById("sexe").value;
+  let codePostale_ = document.getElementById("codePostale").value;
+  let ville_ = document.getElementById("ville").value.toUpperCase();
+  sessionStorage.setItem("nom",nom_);
+  sessionStorage.setItem("prenom",prenom_);
+  sessionStorage.setItem("dateDeNaissance",dateDeNaissance_);
+  sessionStorage.setItem("email",email_);
+  sessionStorage.setItem("adresse",adresse_);
+  sessionStorage.setItem("sexe",sexe_);
+  sessionStorage.setItem("codePostale",codePostale_);
+  sessionStorage.setItem("ville",ville_);
+  
+}
 function createPdf() {
-  var nom = document.getElementById("nom").value.toUpperCase();
-  var prenom = document.getElementById("prenom").value;
-  var  dateDeNaissance= document.getElementById("dateDeNaissance").value;
-  var email = document.getElementById("email").value;
-  var adresse = document.getElementById("adresse").value.toUpperCase();
-  var sexe = document.getElementById("sexe").value;
-  var codePostale = document.getElementById("codePostale").value;
-  var ville = document.getElementById("ville").value.toUpperCase();
+  // var nom = document.getElementById("nom").value.toUpperCase();
+  // var prenom = document.getElementById("prenom").value;
+  // var  dateDeNaissance= document.getElementById("dateDeNaissance").value;
+  // var email = document.getElementById("email").value;
+  // var adresse = document.getElementById("adresse").value.toUpperCase();
+  // var sexe = document.getElementById("sexe").value;
+  // var codePostale = document.getElementById("codePostale").value;
+  // var ville = document.getElementById("ville").value.toUpperCase();
+  nom = sessionStorage.getItem("nom");
+  prenom = sessionStorage.getItem("prenom");
+  dateDeNaissance = sessionStorage.getItem("dateDeNaissance");
+  email = sessionStorage.getItem("email",);
+  adresse = sessionStorage.getItem("adresse");
+  sexe = sessionStorage.getItem("sexe");
+  codePostale = sessionStorage.getItem("codePostale");
+  ville = sessionStorage.getItem("ville");
   var cpv = codePostale  + " " + ville;
   var fullName;
   window.jsPDF = window.jspdf.jsPDF;
