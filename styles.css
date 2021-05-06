@@ -612,16 +612,21 @@
   }
 }
 .grid {
-  max-height: 200vh;
-  background: #ffffff;
-  margin-bottom: 210px;
+  height: auto;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 0%,
+    rgb(255, 255, 255) 130%
+  );
+  margin-bottom: 0px;
 }
 #titre {
   text-align: center;
   padding: 10px;
   font-size: 2rem;
-  background-color: #002fff;
-  background-image: linear-gradient(to top, #08c5ff 0%, #7c10a7 100%);
+  background-color: #ffffff;
+  background-image: linear-gradient(to top, #ffffff 10%, #ffffff 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -641,18 +646,18 @@
   -moz-text-fill-color: transparent;
 }
 form {
-  padding-top: 2%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
-  "t1 t2"
-  "t3 t3"
-  "t8 t5"
-  "t4 t6"
-  "bt bt";
+    "t1 t2"
+    "t3 t3"
+    "t8 t5"
+    "t4 t6"
+    "bt bt";
 }
-input , select {
+input,
+select {
   margin: 20px;
   height: 45px;
   border: 2px solid rgba(0, 0, 139, 0.479);
@@ -688,7 +693,7 @@ select {
 input[type="submit"] {
   grid-area: bt;
   cursor: pointer;
-  background:rgb(5, 217, 255);
+  background: rgb(5, 217, 255);
   transition: 0.2s;
 }
 input[type="submit"]:hover {
@@ -696,19 +701,26 @@ input[type="submit"]:hover {
   color: white;
   transform: scale(1.1);
 }
-  @media screen and (max-width : 600px) {
-    form {
-        grid-template-columns : 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-areas :
-        "t2"
-        "t1"
-        "t3"
-        "t4"
-        "t9"
-        "t5"
-        "t6"
-        "t8"
-        "bt"; 
-
-    }
+@media screen and (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "t2"
+      "t1"
+      "t3"
+      "t4"
+      "t9"
+      "t5"
+      "t6"
+      "t8"
+      "bt";
+  }
+}
+#prix {
+  position: relative;
+  left: 30%;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  color: #464b4d;
+}

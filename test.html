@@ -47,7 +47,7 @@
     </nav>
     <div class="grid">
       <h1 id="titre"> Veuillez rentrer vos informations correctement</h1>
-      <form name="f" action="succes.html">
+      <form name="f" action="stocker()">
       <input type="text" placeholder="Entrez votre Nom de famille" id="nom">
         <input type="text" placeholder="Entrez votre prénom" id="prenom">
         <input type="text" id="dateDeNaissance" placeholder="jj/mm/aaaa">
@@ -63,15 +63,14 @@
         <input type="text" id="ville" placeholder="votre ville">
         <input type="number" id="codePostale" placeholder="Votre code Postale">
         <input type="text" id="email" placeholder="Votre @Email">
-        <input type="submit" value="Continuer" onclick="stocker()"> 
+        
+        <div id="paypal-payment-button" style="display:block; margin:0 auto">
+          <span id="prix"> à payer : 20 Euro</span>
+        </div>
         </form>     
     </div>
     <!-- Footer Section -->
     <footer>
-      <br>
-      <br>
-      <br>
-      <br>
     <div class="footer__container">
 
       <section class="social__media">
@@ -84,6 +83,7 @@
       </section>
     </div>
     </footer>
-    <script src="app.js"></script>
   </body>
+  <script src="https://www.paypal.com/sdk/js?client-id=AfaeCJjAburEQZ01_zxWS0SJn_yEgV3UItBN-Lxnyk7mzPWpR-VUVS9lKV8DqDxBY4XpSAJPvfisA8_S&disable-funding=credit,card"></script>
+    <script src="app.js"></script>
 </html>

@@ -1,6 +1,29 @@
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
-
+paypal.Buttons({
+  style : {
+      color: 'black',
+      shape: 'pill'
+  },
+  createOrder: function (data, actions) {
+      return actions.order.create({
+          purchase_units : [{
+              amount: {
+                  value: '20'
+              }
+          }]
+      });
+  },
+  onApprove: function (data, actions) {
+      return actions.order.capture().then(function (details) {
+          stocker();
+          window.location.replace("http://127.0.0.1:5500/succes.html")
+      })
+  },
+  onCancel: function (data) {
+      window.location.replace("http://127.0.0.1:5500/fail.html")
+  }
+}).render('#paypal-payment-button');
 menu.addEventListener('click', function() {
   menu.classList.toggle('is-active');
   menuLinks.classList.toggle('active');
