@@ -17,7 +17,7 @@ paypal.Buttons({
   onApprove: function (data, actions) {
       return actions.order.capture().then(function (details) {
           stocker();
-          window.location.replace("https://pcrtime.netlify.app/succes.html")
+          window.location.replace("/succes.html")
       })
   },
   onCancel: function (data) {
