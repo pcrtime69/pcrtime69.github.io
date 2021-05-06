@@ -17,11 +17,11 @@ paypal.Buttons({
   onApprove: function (data, actions) {
       return actions.order.capture().then(function (details) {
           stocker();
-          window.location.replace("http://127.0.0.1:5500/succes.html")
+          window.location.replace("https://pcrtime.netlify.app/succes.html")
       })
   },
   onCancel: function (data) {
-      window.location.replace("http://127.0.0.1:5500/fail.html")
+      window.location.replace("https://pcrtime.netlify.app/fail.html")
   }
 }).render('#paypal-payment-button');
 menu.addEventListener('click', function() {
