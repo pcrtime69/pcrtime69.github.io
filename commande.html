@@ -50,7 +50,10 @@
       <form name="f">
       <input type="text" placeholder="Entrez votre Nom de famille" id="nom">
         <input type="text" placeholder="Entrez votre prénom" id="prenom">
+        <fieldset class="ddn">
+          <legend>date de naissace:</legend>
         <input type="date" id="dateDeNaissance" placeholder="jj/mm/aaaa">
+        </fieldset>
         <!-- <input type="number" id="sexe" placeholder="Entrez Homme ou Femme"> -->
         <select id="sexe">
           <option value=""> votre sexe </option>
@@ -62,9 +65,11 @@
         <input type="text" id="adresse" placeholder="Entrez votre adresse">
         <input type="text" id="ville" placeholder="votre ville">
         <input type="number" id="codePostale" placeholder="Votre code Postale">
+        <fieldset class="ddn">
+          <legend>date et heure du prélèvent :</legend>
         <input type="date" id="email" placeholder="la date du test">
         <input type="time" id="time">
-        
+        </fieldset>
         <div id="paypal-payment-button" style="display:block; margin:0 auto">
           <span id="prix"> à payer : 20 Euro</span>
         </div>

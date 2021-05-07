@@ -604,29 +604,26 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .footer__link--items {
-    margin: 0;
-    padding: 10px;
-    width: 100%;
-  }
-}
 .grid {
   height: auto;
-  background: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
   background: linear-gradient(
     to bottom,
-    rgb(0, 0, 0) 0%,
+    rgb(255, 255, 255) 0%,
     rgb(255, 255, 255) 130%
   );
   margin-bottom: 0px;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 10%;
+  margin-top: 5%;
 }
 #titre {
   text-align: center;
   padding: 10px;
   font-size: 2rem;
   background-color: #ffffff;
-  background-image: linear-gradient(to top, #ffffff 10%, #ffffff 100%);
+  background-image: linear-gradient(to top, #ea00ff 10%, #0029df 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -646,15 +643,9 @@
   -moz-text-fill-color: transparent;
 }
 form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas:
-    "t1 t2"
-    "t3 t3"
-    "t8 t5"
-    "t4 t6"
-    "bt bt";
+  display: block;
+  background-image: linear-gradient(-20deg, #b921ff15 0%, #21d5fd07 100%);
+  border-radius: 10px;
 }
 input,
 select {
@@ -665,27 +656,6 @@ select {
   text-align: center;
   border-radius: 5px;
   font-size: 1.1rem;
-}
-#nom {
-  grid-area: "t1";
-}
-#prenom {
-  grid-area: "t2";
-}
-#dateDeNaissance {
-  grid-area: "t3";
-}
-#codePostale {
-  grid-area: "t4";
-}
-#adresse {
-  grid-area: "t8";
-}
-#ville {
-  grid-area: "t5";
-}
-#email {
-  grid-area: "t6";
 }
 select {
   text-align-last: center;
@@ -702,19 +672,20 @@ input[type="submit"]:hover {
   transform: scale(1.1);
 }
 @media screen and (max-width: 600px) {
-  form {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "t2"
-      "t1"
-      "t3"
-      "t4"
-      "t9"
-      "t5"
-      "t6"
-      "t8"
-      "bt";
+  input,
+  select {
+    margin: 20px;
+    width: 80vw;
+    border: 2px solid rgba(0, 0, 139, 0.479);
+    font-family: "font-1";
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.1rem;
+  }
+  .grid {
+    margin: 0;
+    justify-items: center;
+    align-content: ce;
   }
 }
 #prix {
@@ -723,4 +694,17 @@ input[type="submit"]:hover {
   font-weight: bold;
   font-family: Helvetica, sans-serif;
   color: #464b4d;
+}
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+  text-align: center;
+}
+.ddn {
+  grid-area: "t3";
+  background-color: #ffffff;
+  border-color: rgb(225, 0, 255);
+  border-radius: 5px;
+  display: block;
 }
