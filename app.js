@@ -3,7 +3,7 @@ const menuLinks = document.querySelector('.navbar__menu');
 paypal.Buttons({
   style : {
       color: 'black',
-      shape: 'pill'
+      shape: 'pill',
   },
   createOrder: function (data, actions) {
       return actions.order.create({
